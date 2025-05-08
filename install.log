@@ -7,6 +7,6 @@ RewriteRule ^eadropay/(.*)$ checkout/$1 [QSA,PT,L]
 
 
 env
-checkout_success_path = "/eadropay/successdrb"
-checkout_notify_path = "/eadropay/notifydrb"
-checkout_cancel_path = "/eadropay/canceldrb"
+checkout_success_path = "/opalifypay/successs"
+checkout_notify_path = "/opalifypay/notifys"
+checkout_cancel_path = "/opalifypay/cancels"
