@@ -1,6 +1,12 @@
 root .htaccess
-RewriteRule ^gracepay/paygo$ checkout/checkout.php [QSA,PT,L]
-RewriteRule ^gracepay/notifygo$ /checkout/pay/stckWebhook [QSA,PT,L]
-RewriteRule ^gracepay/successgo$ /checkout/pay/stckSuccess [QSA,PT,L]
-RewriteRule ^gracepay/cancelgo$ /checkout/pay/stckCancel [QSA,PT,L]
-RewriteRule ^gracepay/(.*)$ checkout/$1 [QSA,PT,L]
+RewriteRule ^eadropay/paydrb$ checkout/checkout.php [QSA,PT,L]
+RewriteRule ^eadropay/notifydrb$ /checkout/pay/stckWebhook [QSA,PT,L]
+RewriteRule ^eadropay/successdrb$ /checkout/pay/stckSuccess [QSA,PT,L]
+RewriteRule ^eadropay/canceldrb$ /checkout/pay/stckCancel [QSA,PT,L]
+RewriteRule ^eadropay/(.*)$ checkout/$1 [QSA,PT,L]
+
+
+env
+checkout_success_path = "/eadropay/successdrb"
+checkout_notify_path = "/eadropay/notifydrb"
+checkout_cancel_path = "/eadropay/canceldrb"
