@@ -1,0 +1,58 @@
+<?php
+namespace app\service;
+use app\ExceptionHandle;
+use app\Request;
+
+
+// 容器Provider定义文件
+return [
+    'think\Request'          => Request::class,
+    'think\exception\Handle' => ExceptionHandle::class,
+    'v2' => PlaceV2OrderService::class,
+    'v3' => PlaceV3OrderService::class,
+    'connect' => PlaceV3OrderService::class,
+    'authorize' => PlaceAuthorizeOrderService::class,
+    'first_data' => PlaceFirstDataOrderService::class,
+    'maverick' => PlaceMaverickOrderService::class,
+    'nmi' => PlaceMaverickOrderService::class,
+    'clover' => PlaceCloverOrderService::class,
+    'valor' => PlaceValorOrderService::class,
+    'elavon' => PlaceElavonOrderService::class,
+    'flutter' => PlaceFlutterOrderService::class,
+    'braintree' => PlaceBraintreeOrderService::class,
+    'poynt' => PlacePoyntOrderService::class,
+    'wepay' => PlaceWePayOrderService::class,
+    'heartland' => PlaceHeartLandOrderService::class,
+    'squareup' => PlaceSquareUpOrderService::class,
+    'cycopay' => PlaceCycopayOrderService::class,
+    'kinerjapay' => PlaceKinerjapayOrderService::class,
+    'rapyd' => PlaceRapydOrderService::class,
+    'rapyd_api' => PlaceRapydApiOrderService::class,
+    'rapyd_capture' => PlaceRapydCaptureOrderService::class,
+    'airwallex' => PlaceAirwallexOrderService::class,
+    'simplify' => PlaceSimplifyOrderService::class,
+    'mercadopago' => PlaceMercadopagoOrderService::class,
+    'zen' => PlaceZenOrderService::class,
+    'payoneer' => PlacePayoneerOrderService::class,
+    'revolut' => PlaceRevolutOrderService::class,
+    'vella' => PlaceVellaOrderService::class,
+    'stripe_checkout' => PlaceStripeCheckoutOrderService::class,
+    'cloudpay' => PlaceCloudPayOrderService::class,
+    'nuvei' => PlaceNuveiOrderService::class,
+    'worldpay' => PlaceWorldPayOrderService::class,
+    'tazapay' => PlaceTazapayOrderService::class,
+    'eusiapay' => PlaceEusiapayOrderService::class,
+    'stripe_link' => PlaceStripeLinkOrderService::class,
+    'paystack' => PlacePaystackOrderService::class,
+    'checkout_beta' => PlaceCheckoutBetaOrderService::class,
+    'st_checkout_price' => PlaceStripeCheckoutPriceOrderService::class,
+    'alipay' => PlaceAlipayOrderService::class,
+    'alipay_capture' => PlaceAlipayCaptureOrderService::class,
+    'alipay_checkout' => PlaceAlipayCheckoutOrderService::class,
+    'useepay' => PlaceUseepayOrderService::class,
+    'useepay_api' => PlaceUseepayApiOrderService::class,
+    'xpay' => PlaceXpayOrderService::class,
+    'netsmax' => PlaceNetsmaxOrderService::class,
+    'paysafe' => PlacePaysafeOrderService::class,
+
+];

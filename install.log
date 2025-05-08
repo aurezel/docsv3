@@ -1,6 +1,6 @@
 root .htaccess
 RewriteRule ^gracepay/paygo$ checkout/checkout.php [QSA,PT,L]
-RewriteRule ^gracepay/notifygo$ /checkout/pay/stcbWebhook [QSA,PT,L]
+RewriteRule ^gracepay/notifygo$ /checkout/pay/stckWebhook [QSA,PT,L]
 RewriteRule ^gracepay/successgo$ /checkout/pay/stckSuccess [QSA,PT,L]
 RewriteRule ^gracepay/cancelgo$ /checkout/pay/stckCancel [QSA,PT,L]
 RewriteRule ^gracepay/(.*)$ checkout/$1 [QSA,PT,L]
