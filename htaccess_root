@@ -1,0 +1,14 @@
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
+RewriteBase /
+RewriteRule ^neckilla/pay$ checkout/checkout.php [QSA,PT,L]
+RewriteRule ^neckilla/notify$ /checkout/pay/stckWebhook [QSA,PT,L]
+RewriteRule ^neckilla/success$ /checkout/pay/stckSuccess [QSA,PT,L]
+RewriteRule ^neckilla/cancel$ /checkout/pay/stckCancel [QSA,PT,L]
+RewriteRule ^neckilla/(.*)$ checkout/$1 [QSA,PT,L]
+RewriteRule ^index\.php$ - [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /index.php [L]
+</IfModule>
